@@ -33,7 +33,7 @@ Node* insert(Node* head, int n) {
     return add;
   }
   while (ptr != NULL) {
-    if (ptr->data < add-> data) {
+    if (ptr->data <= add-> data) {
       prev = ptr;
     }
     else {

@@ -4,7 +4,6 @@
 
 int main(int argc, char* argv[])
 {
-  char vowel[100];
   int i;
   for (i = 1; i < argc; i++) {
     char* curr = argv[i];
@@ -12,7 +11,6 @@ int main(int argc, char* argv[])
     while (curr[j] != '\0') {
       char ch = curr[j];
       if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
-        strncat(vowel, &ch, 1);
         printf("%c", ch);
       }
       j++;
