@@ -49,9 +49,9 @@ int main(int argc, char* argv[])
     for (k = j; k < len; k++) {
       if (oddMax < array[k]) {
         int temp = oddMax;
+        oddMax = array[k];
         array[j] = array[k];
         array[k] = temp;
-        oddMax = array[k];
       }
     }
   }
