@@ -10,7 +10,14 @@ typedef struct Node
 void print(Node* head) {
   Node* ptr = head;
   while (ptr != NULL) {
-    printf("%d\t", ptr->data);
+    if (ptr->next != NULL) {
+      if (ptr->data != ptr->next->data) {
+        printf("%d\t", ptr->data);
+      }
+    }
+    else {
+      printf("%d\t", ptr->data);
+    }
     ptr = ptr->next;
   }
 }
@@ -126,6 +133,7 @@ int main(int argc, char* argv[])
   else {
     printf("%d\n", count(head));
   }
+  // accounting for dupes
   // printing 
   print(head);
   // freeing everything
